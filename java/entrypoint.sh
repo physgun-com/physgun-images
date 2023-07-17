@@ -9,4 +9,4 @@ python3 /prompt.py --mode=echo
 export MODIFIED_STARTUP=`echo $(python3 /prompt.py --mode=env)`
 echo ":/home/container$ ${MODIFIED_STARTUP}"
 
-eval ${MODIFIED_STARTUP}
+eval "LD_PRELOAD=\"/physgun/jvm_64.so\" ${MODIFIED_STARTUP}"
